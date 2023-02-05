@@ -41,6 +41,7 @@ router.post('/short', async (req, res) => {
                                    }
                                    if (response && response.length > 0) {
                                         shorturlCheck = false
+                                        urlId = 's/' + uniqueId() //generates again until 'shorturlCheck' is set to true
                                    } else {
                                         shorturlCheck = true
                                    }
