@@ -2,7 +2,6 @@ import express from 'express';
 import connection from '../db.js'
 import { validateUrl } from '../utils/utils.js'
 import { uniqueId } from '../utils/utils.js'
-import dotenv from 'dotenv';
 
 const router = express.Router()
 
