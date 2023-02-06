@@ -26,7 +26,8 @@ router.post('/short', async (req, res) => {
 
                     if (response && response.length > 0) {
                          return res.json({
-                              message: "URL Found",
+                              message: "Shortened",
+                              description: "URL Found",
                               url: response[0].origUrl,
                               short: response[0].shortUrl,
                          })
@@ -59,7 +60,8 @@ router.post('/short', async (req, res) => {
                                              return;
                                         }
                                         res.json({
-                                             message: "URL inserted",
+                                             message: 'Shortened',
+                                             description: "URL inserted",
                                              url: result[0].origUrl,
                                              short: result[0].shortUrl
                                         });
@@ -73,7 +75,7 @@ router.post('/short', async (req, res) => {
                // console.log(error)
           }
      } else {
-          res.status(400).json('Invalid Url')
+          res.status(400).json({ message: 'Invalid Url' })
      }
 })
 
